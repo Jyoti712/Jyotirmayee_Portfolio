@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Jyotirmayee Sahoo | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .dark body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+         /* Footer */
+         footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px; /* Adjust padding for spacing */
+            text-align: center;
+            width: 100%; /* Ensure it spans the full width */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px) rotateX(5deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+        
+        section {
+            scroll-margin-top: 80px;
+        }
+        
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+    <style>
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px; /* Adjust padding for spacing */
+            text-align: center;
+            width: 1200px; /* Ensure it spans the full width */
+            box-sizing: border-box; /* Include padding in the width calculation */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+    <style>
+        /* Default hero section background */
+        #home {
+            background-color: #f8fafc; /* Light background */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Dark background for the hero section */
+        #home.dark-hero {
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text color for better contrast */
+        }
+    </style>
+</head>
+<body class="dark:bg-slate-900">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold gradient-text">Jyotirmayee</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="hero_section.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Home</a>
+                    <a href="about.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">About</a>
+                    <a href="project.html" class="nav-link text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Projects</a>
+                    <a href="#contact" class="nav-link text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-md hover:bg-slate-200 dark:hover:bg-slate-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">About</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">Contact</a>
+                <button id="mobile-theme-toggle" class="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400">
+                    Toggle Theme
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Jyotirmayee Sahoo</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Computer Science & Mathematics Student</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 mb-8">Passionate about tech, coding, and solving real-world problems through innovative digital solutions.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="gradient-bg text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">Get In Touch</a>
+                        <a href="#projects" class="border border-indigo-500 text-indigo-500 dark:text-indigo-400 dark:border-indigo-400 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 dark:hover:bg-slate-800 transition-all duration-300">View Projects</a>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full blur-xl opacity-30"></div>
+                        <div class="relative w-full h-full flex items-center justify-center">
+                            <div class="w-56 h-56 md:w-72 md:h-72 bg-white dark:bg-slate-800 rounded-full overflow-hidden shadow-xl border-4 border-white dark:border-slate-700 floating">
+                                <img src="Jyoti_img.jpg" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-slate-50 dark:bg-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 gradient-bg mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6">
+                        I’m Jyotirmayee Sahoo, a Computer Science and Mathematics undergraduate at Christ University Bengaluru, passionate about building practical tech solutions rooted in strong theoretical understanding.
+
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6">
+                        With a military family background and experience as an NCC cadet, I’ve developed discipline, resilience, and leadership. Roles like school captain and Student Support Cell member have helped me balance academics with responsibility and teamwork.
+
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-400 mb-6">
+                        As a Prime Minister’s Scholarship awardee, event emcee, and tech session lead, I’m driven by continuous learning and always ready to take on new challenges.
+
+                    </p>
+                    <div class="flex space-x-4">
+                    <a href="JYOTIRMAYEE_SAHOO_RESUME.pdf" class="border border-indigo-500 text-indigo-500 dark:text-indigo-400 dark:border-indigo-400 px-6 py-2 rounded-lg font-medium hover:bg-indigo-50 dark:hover:bg-slate-800 transition-all duration-300">Download Resume</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">My <span class="gradient-text">Skills</span></h3>
+                    <div class="mb-6">
+                        <h4 class="text-lg font-medium mb-3">Programming Languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full">Java</span>
+                            <span class="skill-badge bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full">Python</span>
+                            <span class="skill-badge bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 px-3 py-1 rounded-full">PHP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-lg font-medium mb-3">Frameworks & Technologies</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">Flutter</span>
+                            <span class="skill-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">Firebase</span>
+                            <span class="skill-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">MySQL</span>
+                            <span class="skill-badge bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 px-3 py-1 rounded-full">Data Analytics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-lg font-medium mb-3">Other Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-badge bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 px-3 py-1 rounded-full">Problem Solving</span>
+                            <span class="skill-badge bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 px-3 py-1 rounded-full">Team Leadership</span>
+                            <span class="skill-badge bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 px-3 py-1 rounded-full">Communication</span>
+                            <span class="skill-badge bg-sky-100 dark:bg-sky-900 text-sky-800 dark:text-sky-200 px-3 py-1 rounded-full">Project Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-gray-50 dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-emerald-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+                    <img src="hostel_ease.jpg" alt="HostelEase" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">HostelEase</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Java-based hostel management system with MySQL integration for efficient student accommodation management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Java</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MySQL</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Swing</span>
+                        </div>
+                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+                    <img src="flora_bliss.png" alt="Flora Bliss" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Flora Bliss</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Mobile gifting app built using Flutter and Firebase with real-time order tracking and payment integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Flutter</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Firebase</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Dart</span>
+                        </div>
+                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+                    </div>
+                </div>
+                 <!-- Project 3 -->
+                 <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+                    <img src="weather_app.jpg" alt="HostelEase" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Weather Web App</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">Real-time weather application using PHP and OpenWeather API with location-based forecasts.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Java</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MySQL</span>
+                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Swing</span>
+                        </div>
+                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+                    </div>
+                </div>
+                
+
+    <!-- Footer -->
+    <footer id="contact" class="py-8 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="social-links mb-4">
+                <a href="https://github.com/Jyoti712" class="mx-2 text-xl" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="mx-2 text-xl" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/" class="mx-2 text-xl"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" class="mx-2 text-xl" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="mb-4">
+                Phone: +91-9440368032 | Email: 
+                <a href="mailto:jyoti765sahoo@gmail.com" class="text-indigo-400 hover:underline">jyoti765sahoo@gmail.com</a>
+            </p>
+            <p class="mb-4">
+                LinkedIn: 
+                <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="text-indigo-400 hover:underline" target="_blank">linkedin.com/in/jyotirmayee-sahoo-714130212/</a> | 
+                GitHub: 
+                <a href="https://github.com/Jyoti712" class="text-indigo-400 hover:underline" target="_blank">github.com/Jyoti712</a>
+            </p>
+            <p>© 2025 Jyotirmayee Sahoo. All rights reserved.</p>
+        </div>
+    </footer>
+<script>
+    // Select the theme toggle button and the hero section
+    const themeToggle = document.getElementById('theme-toggle');
+    const heroSection = document.getElementById('home');
+
+    // Add event listener to toggle the dark background
+    themeToggle.addEventListener('click', () => {
+        heroSection.classList.toggle('dark-hero'); // Toggle the class
+    });
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && (typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet")) {
+					    var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+					    elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
