@@ -39,17 +39,17 @@
 
          /* Footer */
          footer {
-            background-color: var(--dark-color);
+            background-color: #0f172a; /* Dark background */
             color: white;
             padding: 50px 0 20px; /* Adjust padding for spacing */
-            text-align: center;
+            text-align: center; /* Center-align text */
             width: 100%; /* Ensure it spans the full width */
             box-sizing: border-box; /* Include padding in the width calculation */
         }
 
         .social-links {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Center-align social links */
             margin-bottom: 30px;
         }
 
@@ -67,7 +67,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--primary-color);
+            background-color: #6366f1; /* Primary color */
             transform: translateY(-3px);
         }
 
@@ -134,17 +134,17 @@
     </style>
     <style>
         footer {
-            background-color: var(--dark-color);
+            background-color: #0f172a; /* Dark background */
             color: white;
             padding: 50px 0 20px; /* Adjust padding for spacing */
-            text-align: center;
-            width: 1200px; /* Ensure it spans the full width */
+            text-align: center; /* Center-align text */
+            width: 100%; /* Ensure it spans the full width */
             box-sizing: border-box; /* Include padding in the width calculation */
         }
 
         .social-links {
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Center-align social links */
             margin-bottom: 30px;
         }
 
@@ -162,7 +162,7 @@
         }
 
         .social-links a:hover {
-            background-color: var(--primary-color);
+            background-color: #6366f1; /* Primary color */
             transform: translateY(-3px);
         }
 
@@ -315,81 +315,125 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section bg-gray-50 dark:bg-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">My <span class="gradient-text">Projects</span></h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-emerald-600 mx-auto"></div>
+<!-- Projects Section -->
+<section id="projects" class="section bg-gray-50 dark:bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          My <span class="gradient-text">Projects</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary-600 to-emerald-600 mx-auto"></div>
+      </div>
+  
+      <!-- First Row: 3 Projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+          <img src="hostel_ease.jpg" alt="HostelEase" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">HostelEase</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Java-based hostel management system with MySQL integration for efficient student accommodation management.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Java</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MySQL</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Swing</span>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
-                    <img src="hostel_ease.jpg" alt="HostelEase" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">HostelEase</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Java-based hostel management system with MySQL integration for efficient student accommodation management.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Java</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MySQL</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Swing</span>
-                        </div>
-                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
-                    <img src="flora_bliss.png" alt="Flora Bliss" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Flora Bliss</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Mobile gifting app built using Flutter and Firebase with real-time order tracking and payment integration.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Flutter</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Firebase</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Dart</span>
-                        </div>
-                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
-                    </div>
-                </div>
-                 <!-- Project 3 -->
-                 <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
-                    <img src="weather_app.jpg" alt="HostelEase" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Weather Web App</h3>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">Real-time weather application using PHP and OpenWeather API with location-based forecasts.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Java</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MySQL</span>
-                            <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Swing</span>
-                        </div>
-                        <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
-                    </div>
-                </div>
-                
-
-    <!-- Footer -->
-    <footer id="contact" class="py-8 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="social-links mb-4">
-                <a href="https://github.com/Jyoti712" class="mx-2 text-xl" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="mx-2 text-xl" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://x.com/" class="mx-2 text-xl"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/" class="mx-2 text-xl" target="_blank"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p class="mb-4">
-                Phone: +91-9440368032 | Email: 
-                <a href="mailto:jyoti765sahoo@gmail.com" class="text-indigo-400 hover:underline">jyoti765sahoo@gmail.com</a>
-            </p>
-            <p class="mb-4">
-                LinkedIn: 
-                <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="text-indigo-400 hover:underline" target="_blank">linkedin.com/in/jyotirmayee-sahoo-714130212/</a> | 
-                GitHub: 
-                <a href="https://github.com/Jyoti712" class="text-indigo-400 hover:underline" target="_blank">github.com/Jyoti712</a>
-            </p>
-            <p>© 2025 Jyotirmayee Sahoo. All rights reserved.</p>
+            <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+          </div>
         </div>
-    </footer>
+  
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+          <img src="flora_bliss.png" alt="Flora Bliss" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Flora Bliss</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Mobile gifting app built using Flutter and Firebase with real-time order tracking and payment integration.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Flutter</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Firebase</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Dart</span>
+            </div>
+            <a href="https://github.com/Jyoti712" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+          </div>
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+          <img src="weather_app.jpg" alt="Weather App" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Weather Web App</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">Real-time weather application using PHP and OpenWeather API with location-based forecasts.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">PHP</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">OpenWeather API</span>
+              <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">HTML/CSS</span>
+            </div>
+            <a href="https://weather-forecasting-website-alpha.vercel.app/" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Second Row: 2 Projects -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- Project 4 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+          <img src="ServeNow.png" alt="Task Manager" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Serve Now</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">A full-stack platform to connect volunteers with people in need. Built with HTML, CSS, JavaScript, Node.js, and MongoDB. Integrated with Postman for testing and backend routing.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">HTML</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">CSS</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">JavaScript</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Node.js</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">MongoDB</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Postman</span>
+            </div>
+            <a href="https://servenowj.vercel.app/" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+          </div>
+        </div>
+  
+        <!-- Project 5 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md card-3d">
+          <img src="SDG.png" alt="Portfolio Site" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">AI SDG Chatbot</h3>
+            <p class="text-gray-600 dark:text-gray-400 mb-4">A conversational AI chatbot built using Pickaxe, tailored around the UN Sustainable Development Goals. It provides intelligent, prompt-based responses to support SDG awareness and education.</p>
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Pickaxe</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">AI</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">Chatbot</span>
+                <span class="px-2 py-1 bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 text-xs rounded-full">SDG</span>            </div>
+            <a href="https://studio.pickaxe.co/STUDIO3OC9J0SWOOZDY47/SDGASSISTANT_XKQN6" class="text-primary-600 dark:text-primary-400 hover:underline font-medium transform hover:translate-x-2 transition duration-300 inline-block">View Project →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer id="contact" class="py-8 bg-slate-900 text-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="social-links mb-4">
+        <a href="https://github.com/Jyoti712" class="mx-2 text-xl" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="mx-2 text-xl" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://x.com/" class="mx-2 text-xl"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" class="mx-2 text-xl" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p class="mb-4">
+        Phone: +91-9440368032 | Email:
+        <a href="mailto:jyoti765sahoo@gmail.com" class="text-indigo-400 hover:underline">jyoti765sahoo@gmail.com</a>
+      </p>
+      <p class="mb-4">
+        LinkedIn:
+        <a href="https://linkedin.com/in/jyotirmayee-sahoo-714130212/" class="text-indigo-400 hover:underline" target="_blank">linkedin.com/in/jyotirmayee-sahoo-714130212/</a> |
+        GitHub:
+        <a href="https://github.com/Jyoti712" class="text-indigo-400 hover:underline" target="_blank">github.com/Jyoti712</a>
+      </p>
+      <p>© 2025 Jyotirmayee Sahoo. All rights reserved.</p>
+    </div>
+  </footer>
+  
 <script>
     // Select the theme toggle button and the hero section
     const themeToggle = document.getElementById('theme-toggle');
